@@ -1,0 +1,58 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.konten-admin {
+  font-family: "Poppins", sans-serif;
+}
+
+.divider-1 {
+  height: 1em;
+}
+
+.divider-3 {
+  height: 3em;
+}
+
+.divider-5 {
+  height: 5em;
+}
+
+.inshadow {
+  box-shadow: inset 1px 1px 5px #888888;
+}
+
+/* Transform */
+.zoom {
+  transition: transform .7s; /* Animation */
+  
+}
+.zoom:hover {
+  transform: scale(1.05);
+  z-index: 9;
+  position: relative;
+}
+
+.down {
+  transition: transform .7s; /* Animation */
+}
+
+.down:hover {
+  transform: translateY(20px);
+  z-index: 9;
+  position: relative;
+}
+
+.up {
+  transition: transform .7s; /* Animation */
+}
+
+.up:hover {
+  transform: translateY(-20px);
+  z-index: 9;
+  position: relative;
+}
+
+table {
+  font-size: 15px;
+}

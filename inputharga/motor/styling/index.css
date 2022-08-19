@@ -1,0 +1,22 @@
+body {
+	font-family: calibri;
+}
+
+.content {
+	text-align: center;
+	text-decoration: none;
+}
+
+.header {
+	border-bottom: 1px solid black;
+	height: 50px;
+	margin-top: 30px;
+}
+
+.header a {
+	text-decoration: none;
+	padding-right: 15px;
+	border: 1px solid black;
+	padding: 7px;
+	margin: 5px;
+}

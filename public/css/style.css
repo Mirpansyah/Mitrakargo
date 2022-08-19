@@ -1,0 +1,637 @@
+:root {
+    --overlay: rgba(47, 47, 47, 0.5);
+    --secondary: #ffe0cc;
+    --primary: #ffa366;
+    --tersier: #ff8533;
+    --main: #ff6600;
+    --box: rgba(255, 255, 255, 0.8);
+    --gray: rgb(120, 120, 120);
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+h5 {
+    font-size: 30px;
+    font-family: "Roboto";
+    font-weight: bold;
+    margin: 0;
+}
+a {
+    color: white;
+}
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+.banner_container {
+    width: 100%;
+    background: url("../img/hero-banner.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+}
+.banner_container__overlay {
+    position: absolute;
+    background-color: var(--overlay);
+    width: 100%;
+    height: 100vh;
+}
+.banner_container__text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: "Roboto";
+}
+.banner_container__text-hero {
+    font-size: 5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+header {
+    width: 100%;
+    z-index: 10;
+    height: 80px;
+}
+nav {
+    height: 100%;
+    /* background-color: black; */
+}
+.nav_logo {
+    float: left;
+    align-self: flex-start;
+    margin: 15px;
+}
+.nav_logo__img {
+    max-width: 50px;
+}
+.nav_links {
+    margin-top: 29px;
+    width: 30%;
+    height: auto;
+    list-style: none;
+    float: right;
+    display: flex;
+    justify-content: space-around;
+    font-family: "Roboto";
+    text-decoration: none;
+    color: white;
+}
+.nav_links__underline {
+    cursor: pointer;
+}
+.nav_links__underline::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s;
+}
+.nav_links__underline:hover::after {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+}
+.nav__menu-bar {
+    cursor: pointer;
+    display: none;
+}
+.cek-tarif {
+    text-align: center;
+    padding: 50px;
+}
+hr {
+    width: 3%;
+}
+.cek-tarif__form {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.cek-tarif__form > input {
+    width: 30%;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid var(--main);
+}
+.cek-tarif__form > input:focus {
+    background-color: var(--secondary);
+}
+.cek-tarif__form > input:focus::placeholder {
+    color: black;
+}
+.cek-tarif__form > button {
+    width: 10%;
+    border: none;
+    color: white;
+    font-size: 19px;
+    background-color: var(--main);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.tentang-mitra {
+    margin-top: 50px;
+    padding: 50px;
+    background-color: var(--main);
+    height: auto;
+}
+.tentang_mitra__deskripsi {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+.tentang_mitra__deskripsi > div {
+    flex-basis: 45%;
+}
+.tentang-mitra-deskripsi__gambar {
+    width: 100%;
+    height: 100%;
+}
+.tentang-mitra-deskripsi__gambar img {
+    width: 100%;
+    height: auto;
+}
+.tentang-mitra-deskripsi__penjelasan > h5 {
+    font-size: 38px;
+}
+.tentang-mitra-deskripsi__penjelasan {
+    font-size: 19px;
+    font-family: "Roboto";
+}
+.layanan-mitra {
+    background: url("../img/layanan-banner-overlay.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.layanan-mitra > h5 {
+    color: white;
+}
+.layanan-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.layanan-container__layanan {
+    padding: 10px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-color: var(--box);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 19px;
+    font-family: "Roboto";
+    margin: 10px;
+    margin-top: 20px;
+    flex-basis: 30%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: var(--main);
+    cursor: pointer;
+}
+.layanan-container__layanan:hover {
+    transform: translateY(-10px);
+}
+.layanan-text {
+    color: black;
+}
+.layanan-text > h5 {
+    margin-top: 20px;
+    font-size: 19px;
+}
+.video-mitra {
+    padding: 50px;
+    background-color: var(--main);
+    text-align: center;
+}
+.video-mitra__pertama {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    height: 450px;
+}
+.brands-slider {
+    width: 100%;
+}
+.brands-container {
+    background: white;
+    width: 100%;
+    height: 10rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.brands-container::after {
+    content: " ";
+    background-color: rgb(91, 91, 91);
+    position: absolute;
+    width: 10px;
+    filter: blur(20px);
+    box-shadow: 5px 10px inset;
+    height: 100%;
+    left: 0;
+}
+.brands-container::before {
+    content: " ";
+    background-color: rgb(91, 91, 91);
+    position: absolute;
+    width: 10px;
+    filter: blur(20px);
+    box-shadow: 5px 10px inset;
+    height: 100%;
+    z-index: 10;
+    right: 0;
+}
+.brands-container__slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-around;
+}
+.client-mitra {
+    margin-top: 50px;
+    text-align: center;
+}
+.brand {
+    flex-basis: 10%;
+}
+.brands-slider__animate {
+    transform: translateX(0%);
+    animation: slide 10s linear infinite;
+}
+
+.brands-slider__passive {
+    transform: translateX(100%);
+    animation-delay: 10s;
+    animation: slideN 10s linear infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes slideN {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+.footer-banner {
+    margin-top: 50px;
+    margin-bottom: -10px;
+}
+footer {
+    margin-top: 20px;
+    padding: 50px;
+    color: black;
+    background-color: var(--main);
+    display: flex;
+    font-family: "Roboto";
+    justify-content: space-around;
+}
+footer > div {
+    flex-basis: 30%;
+    margin: 10px;
+}
+footer hr {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    border: none;
+}
+footer a {
+    text-decoration: none;
+    font-family: "Roboto";
+    color: black;
+}
+footer a:hover {
+    color: white;
+}
+.side-nav {
+    height: 100%;
+    width: 0;
+    background-color: var(--main);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 19px;
+    overflow-y: auto;
+    transition: width ease 0.5s;
+}
+.side-nav__logo {
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+}
+.side-nav__logo > img {
+    max-height: 80px;
+}
+.side-nav__nav {
+    width: 100%;
+    line-height: 3;
+    margin: auto;
+}
+.side-nav__nav i {
+    color: white;
+}
+.nav__menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.side-nav__nav li {
+    cursor: pointer;
+    padding: 0 10%;
+}
+.side-nav__nav li a {
+    color: black;
+}
+.side-nav__nav li:hover {
+    background-color: var(--tersier);
+    border-radius: 10px;
+}
+.dropdown-layanan {
+    overflow-y: auto;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    height: 0;
+    display: block;
+    transition: height ease 0.5s;
+}
+.rotasi {
+    transition: transform ease 0.5s;
+}
+.tutup-sidenav {
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    right: 0;
+    z-index: 101;
+}
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 50;
+    border-top: 1px solid black;
+    background-color: white;
+    display: none;
+}
+.bottom-nav__container {
+    display: flex;
+    justify-content: space-around;
+}
+.bottom-nav__container div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    padding: 10px;
+    font-family: "Roboto";
+    font-weight: bold;
+    line-height: 2;
+}
+.bottom-nav__container a {
+    text-decoration: none;
+    color: black;
+}
+.bottom-nav__container i {
+    text-decoration: none;
+    color: var(--gray);
+}
+.hasil-api {
+    text-align: left;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.hasil-api div {
+    margin: 5px;
+    background-color: var(--secondary);
+    border-left: 5px solid var(--main);
+    height: auto;
+    padding: 10px;
+}
+.hasil-api h3 {
+    text-align: center;
+}
+.loading {
+    margin-top: 15px;
+    font-size: 3em;
+    animation: load 1s ease infinite;
+}
+.wa {
+    position: fixed;
+    z-index: 100;
+    margin: 10px;
+    right: 0;
+    bottom: 0;
+    color: green;
+    background-color: rgb(144, 238, 144);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-align: center;
+}
+.wa:before,
+.wa:after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 10px solid rgba(255, 16, 16, 0.3);
+    border-radius: 50%;
+    animation: pulse 2.5s linear infinite;
+}
+.wa:hover {
+    cursor: pointer;
+}
+@keyframes pulse {
+    0% {
+        border: 10px solid rgba(255, 16, 16, 0.3);
+
+        transform: scale(1);
+    }
+    40% {
+        border: 1px solid rgba(255, 16, 16, 0);
+
+        transform: scale(1.2);
+    }
+    51% {
+        border: 10px solid rgba(144, 238, 144, 0);
+
+        transform: scale(1);
+    }
+    100% {
+        border: 1px solid rgba(144, 238, 144, 0);
+
+        transform: scale(1.2);
+    }
+}
+@keyframes load {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.header-active {
+    position: relative;
+    background-color: var(--main);
+}
+.header-isNot-active {
+    position: absolute;
+}
+@media only screen and (min-width: 768px) {
+    .nav_links {
+        width: auto;
+        margin-right: 5%;
+    }
+    .nav_links > li {
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .banner_container__text-hero {
+        font-size: 2em;
+    }
+    .nav_links {
+        width: auto;
+        margin-right: 5%;
+    }
+    .nav_links > li {
+        margin: 0 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .tentang-mitra-deskripsi__gambar img {
+        max-height: 200px;
+    }
+    .video-mitra h5 {
+        font-size: 25px;
+    }
+    .wa {
+        margin-bottom: 90px;
+    }
+    .bottom-nav {
+        display: block;
+    }
+    .banner_container {
+        background-position: center;
+    }
+    .banner_container__text-hero {
+        font-size: 1.5em;
+    }
+    .cek-tarif__form {
+        flex-direction: column;
+    }
+    .cek-tarif__form > input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .cek-tarif__form > button {
+        width: 100%;
+        height: 30px;
+    }
+    .tentang_mitra__deskripsi {
+        flex-direction: column;
+    }
+    .tentang-mitra-deskripsi__penjelasan {
+        margin-top: 15px;
+    }
+    .layanan-container {
+        flex-direction: column;
+    }
+    .video-mitra {
+        padding: 10px;
+    }
+    .brands-container {
+        font-size: 0.5rem;
+    }
+    .brands-slider {
+        width: auto;
+    }
+    footer {
+        flex-direction: column;
+        height: auto;
+        color: black;
+        margin-bottom: 70px;
+    }
+    .brands-slider__animate {
+        transform: translateX(0%);
+        animation: slide 10s linear infinite;
+    }
+
+    .brands-slider__passive {
+        transform: translateX(210%);
+        animation-delay: 10s;
+        animation: slideN 10s linear infinite;
+    }
+    @keyframes slide {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-210%);
+        }
+    }
+    @keyframes slideN {
+        0% {
+            transform: translateX(210%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    .nav_links {
+        display: none;
+    }
+    .nav__menu-bar {
+        margin: 15px;
+        display: flex;
+        font-family: "Roboto";
+        font-size: 1em;
+        width: 20%;
+        float: right;
+        color: white;
+    }
+    .nav__menu-bar > svg {
+        width: 50px;
+    }
+}
